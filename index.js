@@ -124,3 +124,9 @@ greatestIncrease: greatestIncrease,
 greatestDecrease: greatestDecrease
 };
 }
+var analysisResult = analyzeFinances(finances);
+console.log("Total number of months:", analysisResult.totalMonths);
+console.log("Net total amount of Profit/Losses:", analysisResult.totalProfitLosses);
+console.log("Average of changes in Profit/Losses:", analysisResult.averageChanges);
+console.log("Greatest increase in profits:", analysisResult.greatestIncrease.date, "Amount:", analysisResult.greatestIncrease.amount);
+console.log("Greatest decrease in losses:", analysisResult.greatestDecrease.date, "Amount:", analysisResult.greatestDecrease.amount);
