@@ -99,4 +99,18 @@ function analyzeFinances(finances) {
   totalProfitLosses += finances[i][1];
   if (i > 0) {
       var change = finances[i][1] - finances[i - 1][1];
-      totalChanges += change;
+      totalChanges += change; 
+      
+
+      // This is to track greatest increase and decrease
+      if (change > greatestIncrease.amount) {
+        greatestIncrease.date = finances[i][0];
+        greatestIncrease.amount = change;
+    }
+    if (change < greatestDecrease.amount) {
+        greatestDecrease.date = finances[i][0];
+        greatestDecrease.amount = change;
+    }
+  }
+} 
+
