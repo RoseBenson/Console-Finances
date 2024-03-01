@@ -113,4 +113,14 @@ function analyzeFinances(finances) {
     }
   }
 } 
+// This calculates the average of changes
+var averageChanges = totalChanges / (totalMonths - 1);
 
+return {
+totalMonths: totalMonths,
+totalProfitLosses: totalProfitLosses,
+averageChanges: averageChanges,
+greatestIncrease: greatestIncrease,
+greatestDecrease: greatestDecrease
+};
+}
