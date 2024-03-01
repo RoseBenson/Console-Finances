@@ -93,3 +93,10 @@ function analyzeFinances(finances) {
   var totalChanges = 0;
   var greatestIncrease = { date: '', amount: -Infinity };
   var greatestDecrease = { date: '', amount: Infinity };
+
+ // This calculates total profit/losses and total changes
+ for (var i = 0; i < finances.length; i++) {
+  totalProfitLosses += finances[i][1];
+  if (i > 0) {
+      var change = finances[i][1] - finances[i - 1][1];
+      totalChanges += change;
