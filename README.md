@@ -1,6 +1,8 @@
 # Console-Finances
 
-![Console Finances]()
+![Console Finances](./images/resultsofconsole.JPG)
+
+![Final Results](./images/Mypersonalconsoleresults.JPG)
 
 ## Description
 
