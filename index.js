@@ -86,3 +86,31 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+function analyzeFinances(finances) {
+    var totalMonths = finances.length;
+    var totalProfitLosses = 0;
+    var totalChanges = 0;
+
+    // This calculates total profit/losses and total changes
+    for (var i = 0; i < finances.length; i++) {
+        totalProfitLosses += finances[i][1];
+        if (i > 0) {
+            totalChanges += finances[i][1] - finances[i - 1][1];
+        }
+    }
+
+    // This calculates average of changes
+    var averageChanges = totalChanges / (totalMonths - 1);
+
+    return {
+        totalMonths: totalMonths,
+        totalProfitLosses: totalProfitLosses,
+        averageChanges: averageChanges
+    };
+}
+
+var analysisResult = analyzeFinances(finances);
+console.log("Total number of months:", analysisResult.totalMonths);
+console.log("Net total amount of Profit/Losses:", analysisResult.totalProfitLosses);
+console.log("Average of changes in Profit/Losses:", analysisResult.averageChanges);
